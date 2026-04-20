@@ -7,14 +7,58 @@ body {
   color: yellow;
 }
 
+.marquee {
+  margin: 10px 0;
+  padding: 10px;
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+  background: black;
+  color: lime;
+  font-weight: bold;
+}
+
+.marquee.alt {
+  color: cyan;
+}
+
+.marquee img {
+  vertical-align: middle;
+}
+
+@keyframes flashy {
+  0%   { color: yellow; }
+  25%  { color: red; }
+  50%  { color: lime; }
+  75%  { color: magenta; }
+  100% { color: yellow; }
+}
+
+.flashy {
+  animation: flashy 0.3s steps(1) infinite;
+  font-style: italic;
+}
+
 .page {
   padding: 20px;
   text-align: center;
 }
 
+@keyframes rainbow-glow {
+  0%   { color: red;     text-shadow: 0 0 10px red; }
+  16%  { color: orange;  text-shadow: 0 0 10px orange; }
+  33%  { color: yellow;  text-shadow: 0 0 10px yellow; }
+  50%  { color: lime;    text-shadow: 0 0 10px lime; }
+  66%  { color: cyan;    text-shadow: 0 0 10px cyan; }
+  83%  { color: magenta; text-shadow: 0 0 10px magenta; }
+  100% { color: red;     text-shadow: 0 0 10px red; }
+}
+
 .title {
-  color: lime;
-  text-shadow: 2px 2px red;
+  animation: rainbow-glow 3s linear infinite;
+}
+
+.title img {
+  vertical-align: middle;
 }
 
 .panel {
@@ -27,4 +71,61 @@ body {
 
 a {
   color: cyan;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.stars-panel {
+  background-image: url('./img/stars.gif');
+  background-repeat: repeat;
+}
+
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.gif-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.panels {
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.mchammer-strip {
+  max-width: 570px;
+  margin: 0 auto 4px;
+  height: 60px;
+  background-image: url('./img/mchammer.gif');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+.misc-internetz {
+  margin-bottom: 20px;
+}
+
+.counter img[alt="Visitor Counter"] {
+  margin: 0 20px;
 }
