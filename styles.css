@@ -129,3 +129,10 @@ li {
 .counter img[alt="Visitor Counter"] {
   margin: 0 20px;
 }
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #aaaaaa;
+  padding: 10px 0 4px;
+  margin: 0;
+}
